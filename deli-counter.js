@@ -12,33 +12,40 @@
 
 function line(arr) {
     output = ''
-    if (arr.length){
+    if (arr.length) {
         for (let i=0; i < arr.length; i++){    
             output += `${i+1}. ${arr[i]} `
         }        
     }
-    else{
-        console.log(output = "Empty!")
+    else {
+        output = "Empty!"
     }
     console.log(`The line is currently: ${output}`)
 }
 
-function nowServing(katzDeli) {
-    if (katzDeli){
-        let current = katzDeli.shift()
+function nowServing(arr) {
+    if (arr.length) {
+        let current = arr.shift()
         console.log(`Currently serving ${current}.`)
+        line(arr)
     }
-    else{
+    else {
         console.log("There is nobody waiting to be served!")
     }
 }
 
-takeANumber(katzDeli, "Ada")
-takeANumber(katzDeli, "Grace")
-takeANumber(katzDeli, "Kent")
-
 line(katzDeli)
+nowServing(katzDeli)
 
+takeANumber(katzDeli, "Ada")
+line(katzDeli)
+takeANumber(katzDeli, "Grace")
+line(katzDeli)
+takeANumber(katzDeli, "Kent")
+line(katzDeli)
+nowServing(katzDeli)
+nowServing(katzDeli)
+nowServing(katzDeli)
 nowServing(katzDeli)
 
 // nowServing(katzDeli) //=> "Currently serving Ada."
