@@ -10,18 +10,12 @@
      console.log(`Welcome, ${customer}. You are number ${katzDeli.length} in line`)
  }
 
-// takeANumber(katzDeli, "Ada") //=> Welcome, Ada. You are number 1 in line.
-// takeANumber(katzDeli, "Grace") //=> Welcome, Grace. You are number 2 in line.
-// takeANumber(katzDeli, "Kent") //=> Welcome, Kent. You are number 3 in line.
-
-// line(katzDeli) //=> "The line is currently: 1. Ada 2. Grace 3. Kent"
 function line(arr) {
     console.log("TEST: " + arr)
     output = ''
     if (arr.length){
         for (let i=0; i < arr.length; i++){    
             output += `${i+1}. ${arr[i]} `
-            //console.log("TEST: " + output)
         }        
     }
     else{
@@ -31,8 +25,13 @@ function line(arr) {
 }
 
 function nowServing(katzDeli) {
-    let current = katzDeli.shift()
-    console.log(`Currently serving ${current}.`)
+    if (katzDeli){
+        let current = katzDeli.shift()
+        console.log(`Currently serving ${current}.`)
+    }
+    else{
+        console.log("There is nobody waiting to be served!")
+    }
 }
 
 takeANumber(katzDeli, "Ada")
