@@ -11,7 +11,6 @@
  }
 
 function line(arr) {
-    console.log("TEST: " + arr)
     output = ''
     if (arr.length){
         for (let i=0; i < arr.length; i++){    
