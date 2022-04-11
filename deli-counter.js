@@ -7,7 +7,7 @@
 
  function takeANumber(arr, customer) {
      arr.push(customer);
-     console.log(`Welcome, ${customer}. You are number ${katzDeli.length} in line`)
+     console.log(`Welcome, ${customer}. You are number ${arr.length} in line`)
  }
 
 function line(arr) {
@@ -43,6 +43,7 @@ takeANumber(katzDeli, "Grace")
 line(katzDeli)
 takeANumber(katzDeli, "Kent")
 line(katzDeli)
+
 nowServing(katzDeli)
 nowServing(katzDeli)
 nowServing(katzDeli)
